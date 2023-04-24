@@ -1,0 +1,37 @@
+{% extends './layout.html' %}
+
+{% block title %}{{ data.titulo }}{% endblock %}
+
+{% block body %}
+{% include './header.html' %}
+<div class="texto">
+    <p>Seguimientos</p>
+</div>
+<div class="texto-des">
+    <p>En este apartado puedes personalizar los correos de seguimiento o correos de Cierre para los casos que tengas en backlog</p>
+</div>
+<div>
+    <form>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre">
+        
+        <label for="incidente">Numero de incidente:</label>
+        <input type="text" id="incidente">
+        
+        <label for="time">Hora que se escribio al colaborador:</label>
+        <input type="text" id="time">
+
+        <label for="date">Fecha del seguimiento:</label>
+        <input type="text" id="date">
+
+        <button type="button" onclick="mostrarDatos()">Generar texto</button>
+      </form>
+      
+      <p id="texto"></p>
+      
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/seguimientos.js') }}"></script>
+
+{% endblock %}

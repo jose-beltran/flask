@@ -16,12 +16,12 @@ def documentar():
     }
     return render_template('documentar.html', data=data)
 
-@app.route('/historial')
+@app.route('/seguimiento')
 def historial():
     data={
-        'titulo':'Documentar caso'
+        'titulo':'Seguimientos'
     }
-    return render_template('historial.html', data=data)
+    return render_template('seguimiento.html', data=data)
 
 @app.route('/plantillas')
 def plantillas():
